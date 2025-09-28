@@ -1,0 +1,4 @@
+# Основные зависимости для Todo-Timed
+PySide6>=6.5.0
+python-dateutil>=2.8.2
+pyinstaller>=5.13.0

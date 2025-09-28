@@ -1,0 +1,397 @@
+/* Светлая тема для Todo-Timed в стиле Windows 11 */
+
+/* Основные цвета */
+QWidget {
+    background-color: #ffffff;
+    color: #323130;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Главное окно */
+QMainWindow {
+    background-color: #f3f2f1;
+}
+
+/* Кнопки */
+QPushButton {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-height: 20px;
+    font-weight: 400;
+}
+
+QPushButton:hover {
+    background-color: #f3f2f1;
+    border-color: #c7c7c7;
+}
+
+QPushButton:pressed {
+    background-color: #edebe9;
+    border-color: #a19f9d;
+}
+
+QPushButton:disabled {
+    background-color: #f3f2f1;
+    color: #a19f9d;
+    border-color: #edebe9;
+}
+
+/* Основная кнопка */
+QPushButton[primary="true"] {
+    background-color: #0078d4;
+    color: #ffffff;
+    border-color: #0078d4;
+}
+
+QPushButton[primary="true"]:hover {
+    background-color: #106ebe;
+    border-color: #106ebe;
+}
+
+QPushButton[primary="true"]:pressed {
+    background-color: #005a9e;
+    border-color: #005a9e;
+}
+
+/* Поля ввода */
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    padding: 8px;
+    selection-background-color: #0078d4;
+    selection-color: #ffffff;
+}
+
+QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus {
+    border-color: #0078d4;
+    border-width: 2px;
+}
+
+/* Комбо-боксы */
+QComboBox {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 100px;
+}
+
+QComboBox:hover {
+    border-color: #c7c7c7;
+}
+
+QComboBox:focus {
+    border-color: #0078d4;
+    border-width: 2px;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNiA2TDExIDEiIHN0cm9rZT0iIzMyMzEzMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+);
+}
+
+QComboBox QAbstractItemView {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    selection-background-color: #f3f2f1;
+}
+
+/* Чекбоксы */
+QCheckBox {
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #0078d4;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #0078d4;
+    border-color: #0078d4;
+    image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDQuNUw0LjUgOEwxMSAxIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPg==);
+}
+
+/* Списки */
+QListWidget, QTreeWidget, QTableWidget {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    alternate-background-color: #faf9f8;
+    selection-background-color: #deecf9;
+    selection-color: #323130;
+}
+
+QListWidget::item, QTreeWidget::item, QTableWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #f3f2f1;
+}
+
+QListWidget::item:hover, QTreeWidget::item:hover, QTableWidget::item:hover {
+    background-color: #f3f2f1;
+}
+
+QListWidget::item:selected, QTreeWidget::item:selected, QTableWidget::item:selected {
+    background-color: #deecf9;
+    color: #323130;
+}
+
+/* Заголовки таблиц */
+QHeaderView::section {
+    background-color: #faf9f8;
+    border: 1px solid #edebe9;
+    padding: 8px;
+    font-weight: 600;
+}
+
+/* Полосы прокрутки */
+QScrollBar:vertical {
+    background-color: #f3f2f1;
+    width: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #c8c6c4;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #a19f9d;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: #f3f2f1;
+    height: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #c8c6c4;
+    border-radius: 6px;
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #a19f9d;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* Меню */
+QMenuBar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #edebe9;
+    padding: 4px;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:hover {
+    background-color: #f3f2f1;
+}
+
+QMenuBar::item:pressed {
+    background-color: #edebe9;
+}
+
+QMenu {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+QMenu::item:hover {
+    background-color: #f3f2f1;
+}
+
+QMenu::item:selected {
+    background-color: #deecf9;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #edebe9;
+    margin: 4px 0px;
+}
+
+/* Панель инструментов */
+QToolBar {
+    background-color: #faf9f8;
+    border: none;
+    spacing: 4px;
+    padding: 8px;
+}
+
+QToolButton {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+QToolButton:hover {
+    background-color: #f3f2f1;
+    border-color: #d1d1d1;
+}
+
+QToolButton:pressed {
+    background-color: #edebe9;
+    border-color: #c7c7c7;
+}
+
+QToolButton:checked {
+    background-color: #deecf9;
+    border-color: #0078d4;
+}
+
+/* Статусная строка */
+QStatusBar {
+    background-color: #faf9f8;
+    border-top: 1px solid #edebe9;
+    padding: 4px;
+}
+
+/* Группы */
+QGroupBox {
+    font-weight: 600;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 8px;
+    padding: 0 4px 0 4px;
+    background-color: #ffffff;
+}
+
+/* Вкладки */
+QTabWidget::pane {
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+QTabBar::tab {
+    background-color: #f3f2f1;
+    border: 1px solid #d1d1d1;
+    border-bottom: none;
+    border-radius: 4px 4px 0px 0px;
+    padding: 8px 16px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:hover {
+    background-color: #edebe9;
+}
+
+QTabBar::tab:selected {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Календарь */
+QCalendarWidget {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+}
+
+QCalendarWidget QToolButton {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+}
+
+QCalendarWidget QToolButton:hover {
+    background-color: #f3f2f1;
+    border-radius: 4px;
+}
+
+QCalendarWidget QAbstractItemView {
+    background-color: #ffffff;
+    selection-background-color: #0078d4;
+    selection-color: #ffffff;
+}
+
+QCalendarWidget QAbstractItemView:enabled {
+    color: #323130;
+}
+
+/* Диалоги */
+QDialog {
+    background-color: #ffffff;
+}
+
+/* Прогресс-бар */
+QProgressBar {
+    background-color: #f3f2f1;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    text-align: center;
+    height: 20px;
+}
+
+QProgressBar::chunk {
+    background-color: #0078d4;
+    border-radius: 3px;
+}
+
+/* Слайдеры */
+QSlider::groove:horizontal {
+    background-color: #f3f2f1;
+    height: 4px;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal {
+    background-color: #0078d4;
+    border: 1px solid #0078d4;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    margin: -6px 0;
+}
+
+QSlider::handle:horizontal:hover {
+    background-color: #106ebe;
+    border-color: #106ebe;
+}
