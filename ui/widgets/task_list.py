@@ -284,7 +284,7 @@ class TaskListWidget(QWidget):
     
     def connect_signals(self):
         """Подключение сигналов"""
-        self.add_button.clicked.connect(self.add_task_requested.emit)
+        self.add_button.clicked.connect(lambda _: self.add_task_requested.emit())
         self.search_input.textChanged.connect(self.on_search_changed)
         self.filter_combo.currentTextChanged.connect(self.on_filter_changed)
         
