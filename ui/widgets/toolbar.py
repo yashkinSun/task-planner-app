@@ -46,14 +46,14 @@ class MainToolBar(QToolBar):
             # Добавить задачу
             self.add_action = QAction(self)
             self.add_action.setShortcut(QKeySequence.StandardKey.New)
-            self.add_action.triggered.connect(self.add_task_requested.emit)
+            self.add_action.triggered.connect(lambda _: self.add_task_requested.emit())
             self.actions_dict['add'] = self.add_action
             self.addAction(self.add_action)
             
             # Редактировать задачу
             self.edit_action = QAction(self)
             self.edit_action.setShortcut(QKeySequence("Ctrl+E"))
-            self.edit_action.triggered.connect(self.edit_task_requested.emit)
+            self.edit_action.triggered.connect(lambda _: self.edit_task_requested.emit())
             self.edit_action.setEnabled(False)  # Включается при выборе задачи
             self.actions_dict['edit'] = self.edit_action
             self.addAction(self.edit_action)
@@ -64,7 +64,7 @@ class MainToolBar(QToolBar):
             # Отметить как выполненное
             self.done_action = QAction(self)
             self.done_action.setShortcut(QKeySequence("Ctrl+D"))
-            self.done_action.triggered.connect(self.mark_done_requested.emit)
+            self.done_action.triggered.connect(lambda _: self.mark_done_requested.emit())
             self.done_action.setEnabled(False)  # Включается при выборе задачи
             self.actions_dict['done'] = self.done_action
             self.addAction(self.done_action)
@@ -72,7 +72,7 @@ class MainToolBar(QToolBar):
             # Удалить задачу
             self.delete_action = QAction(self)
             self.delete_action.setShortcut(QKeySequence.StandardKey.Delete)
-            self.delete_action.triggered.connect(self.delete_task_requested.emit)
+            self.delete_action.triggered.connect(lambda _: self.delete_task_requested.emit())
             self.delete_action.setEnabled(False)  # Включается при выборе задачи
             self.actions_dict['delete'] = self.delete_action
             self.addAction(self.delete_action)
@@ -83,14 +83,14 @@ class MainToolBar(QToolBar):
             # Перейти к сегодня
             self.today_action = QAction(self)
             self.today_action.setShortcut(QKeySequence("Ctrl+T"))
-            self.today_action.triggered.connect(self.go_to_today_requested.emit)
+            self.today_action.triggered.connect(lambda _: self.go_to_today_requested.emit())
             self.actions_dict['today'] = self.today_action
             self.addAction(self.today_action)
             
             # Обновить
             self.refresh_action = QAction(self)
             self.refresh_action.setShortcut(QKeySequence.StandardKey.Refresh)
-            self.refresh_action.triggered.connect(self.refresh_requested.emit)
+            self.refresh_action.triggered.connect(lambda _: self.refresh_requested.emit())
             self.actions_dict['refresh'] = self.refresh_action
             self.addAction(self.refresh_action)
             
@@ -100,7 +100,7 @@ class MainToolBar(QToolBar):
             # Настройки
             self.settings_action = QAction(self)
             self.settings_action.setShortcut(QKeySequence.StandardKey.Preferences)
-            self.settings_action.triggered.connect(self.settings_requested.emit)
+            self.settings_action.triggered.connect(lambda _: self.settings_requested.emit())
             self.actions_dict['settings'] = self.settings_action
             self.addAction(self.settings_action)
             
